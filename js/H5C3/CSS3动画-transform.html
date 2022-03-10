@@ -1,0 +1,70 @@
+<!--
+ * @Author: Ana
+ * @Date: 2021-11-25 21:33:31
+ * @LastEditors: Ana
+ * @LastEditTime: 2021-11-25 22:13:57
+ * @Description: 今天也要加油呀
+ * @FilePath: /H5C3/CSS3动画.html
+-->
+<!-- transform基础知识
+功能:
+2D
+1.实现缩放  语法:transform:scale(缩放倍数) 或者(水平缩放倍数,数值缩放倍数) 
+2.倾斜  语法:transform:skew(倾斜倍数) 或者(水平倾斜倍数,数值倾斜倍数) 
+3.指定基准点 transform-origin:基准点在水平方向上的位置,在竖直方向上的位置
+4.实现移动  transform:translate(水平方向上移动的距离) 或者(水平,竖直) 
+3D
+1.旋转 transform:rotateX(45deg)rotateY(45deg)rotateZ(45deg)
+2.缩放 transform:scaleX(0.4)scaleY(1)scaleZ(2)
+3.倾斜
+4.移动-->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+        <title> </title>
+        <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            div{
+                width: 200px;
+               
+                background-color: chartreuse;
+                margin-bottom: 30px;
+                text-align: center;
+                
+            }
+            div:nth-child(1){
+                transform: scale(1.5);  /*此时表示的就是整体都放大*/
+            }
+            div:nth-child(3){
+                transform: scale(2,4);
+                transform: skew(20deg,10deg);
+                transform-origin: right bottom;
+                transform: translate(100px,200px);
+
+            }
+            div:nth-child(2){
+                transform: rotateY(30deg);
+            }
+            
+        </style>
+
+    <script type="text/javascript">
+        
+        
+    </script>
+    </head>
+    <body>
+        <div>Ana</div>
+        <div>Nancy</div>
+        <div>Henry</div>
+
+    </body>
+</html>
+

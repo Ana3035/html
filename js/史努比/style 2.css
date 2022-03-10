@@ -1,0 +1,26 @@
+#box{
+    width: 100px;
+    height: 150px;
+    background-color: bisque;
+}
+#box1{
+    width: 100px;
+    height: 150px;
+    background-color: rgb(224, 129, 13);
+
+}
+#box2{
+    width: 100px;
+    height: 150px;
+    background-color: rgb(214, 196, 255);
+}
+#box3{
+    width: 100px;
+    height: 150px;
+    background-color: rgb(50, 12, 139);
+}
+#box4{
+    width: 100px;
+    height: 150px;
+    background-color: rgb(80, 9, 247);
+}

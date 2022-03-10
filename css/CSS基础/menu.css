@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+li a{
+    color: red;
+    text-decoration: none;
+}
+#menu{
+    width: 300px;
+    margin: 20px;
+
+}
+#menu li{
+    font-size: 20px;
+}
+#menu>li{
+    /* background: url(../img/2.jpeg); */
+    line-height: 24px;
+    text-indent: 60px;
+
+}
+#menu ul{
+    display: none;
+}
+#menu ul li{
+    text-indent: 30px;
+
+}
+ #menu>li:hover ul{  /*此处表示的是当鼠标移动到li的时候，下面的ul就变成block，此时才会显示 */
+    display: block;
+}

@@ -1,0 +1,75 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-11-10 14:13:06
+ * @LastEditTime: 2021-11-12 10:43:45
+ * @LastEditors: Ana
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: /css/css用法.html
+-->
+
+<!-- css 层叠样式表，对网页信息的显示运行控制
+web标准包含了结构、表现、行为-->
+<!-- css样式：优先级行内最高，之后外部和内部谁在下面用的是谁
+    （1）内部样式表
+    （2）外部样式表
+    （3）内联样式表(行内样式、嵌入式样式) -->
+
+<!-- css语法：选择器 属性  属性值
+    selector{property:value;property:value} -->
+
+<!-- 简单的属性使用：
+    color width height background-color -->
+
+<!-- 标签的分类
+    1、块内元素  p标签独占一行 h标签也是，但是b标签就是，块级元素可以自己设置宽度和高度，不设置的时候，默认和父级元素是一样的 其中div为最常用的结构元素，常用于分割页面区域，以及功能模块。
+    
+    2、内联元素
+    常见的内联元素：a span strong b等
+    内联元素的表现形式是行内逐个显示，意思就是都在一行之中，内联元素无法设置长宽高
+
+    3、内联块级元素 
+    内联块行内块级元素表示的是块级元素以及内联元素的混合体。inlineblock元素来设置宽度和高度，
+    内联块级元素属于内联元素，不会独占一行，常见的内联元素：img input select textarea iframe
+    -->
+
+<!-- 元素类型的转换
+    display的属性：block inline inline-block -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ana's css</title>
+
+        
+        <!-- 此处表示的是内部样式 首先找到p标签之后确定属性和属性值-->
+        <style type="text/css" >
+            p{
+                color:black;
+            }
+        </style>
+
+        <!-- 外部样式 href表示的是选择路径-->
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        
+    </head>
+    <body>
+        <!-- 行内样式 -->
+        <!-- <p style="属性：属性值 属性：属性值"></p> -->
+        <p style="color: red;">Ana is good</p>
+        <p >Ana is nice</p>
+       <span  style="color: red;display:block;">
+        Ana is nice
+       </span>
+       <span  style="color: rgb(38, 0, 255); display:block;">
+        Ana is nice
+       </span>
+        
+       <!-- 实现行内块元素 其实就是导航 -->
+       
+    </body>
+</html>
+
+
+

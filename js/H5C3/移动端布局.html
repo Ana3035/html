@@ -1,0 +1,143 @@
+<!--
+ * @Author: Ana
+ * @Date: 2021-11-25 18:23:08
+ * @LastEditors: Ana
+ * @LastEditTime: 2021-11-25 21:24:33
+ * @Description: 今天也要加油呀
+ * @FilePath: /H5C3/移动端布局.html
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+        <title> </title>
+        <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /* html{
+            /* 1rem=16px */
+            /* font-size: 16px;
+        } */ 
+        nav{
+            height: 49px;
+            /* width: 100%; */
+            background-color: aquamarine;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+        }
+        nav ul li{
+            flex-grow: 1;
+            line-height: 49px;
+            text-align: center;
+            
+        }
+        nav ul li a{
+            text-decoration: none;
+            font-size: 0.5rem;
+        }
+        #box ul{
+            flex-wrap: wrap;
+        }
+        #box li{
+            display: flex; 
+            border-bottom: 1px solid royalblue; 
+            flex-direction: row;
+            flex-grow: 1;
+        }
+        #box li div:nth-of-type(1){
+            width: 2.6rem;
+            height: 2.6rem;
+            background-color: blueviolet;
+            flex-grow: 1;
+            
+        }
+        #box li div:nth-of-type(2){
+            width: 2.6rem;
+            height: 2.6rem;   /*此时表示的就是屏幕改变字体改变且行业改变*/
+            background-color: yellow;
+            flex-grow: 5;
+        }
+    </style>
+
+    <script type="text/javascript">
+        // 屏幕改变HTML也变小,紧接着rem也改变
+        //innerWidth表示的是屏幕的宽度
+        document.documentElement.style.fontSize=innerWidth/10+"px"  //屏幕改变
+        window.onresize=function(){  //表示HTML字体大小发生改变
+            document.documentElement.style.fontSize=innerWidth/10+"px"
+  
+        }
+    </script>
+    </head>
+    <body>
+        <div id="box">
+            <ul>
+                <li>
+                    <div id=""></div>
+                    <div id=""></div>
+                </li>
+
+                <li>
+                    <div id=""></div>
+                    <div id=""></div>
+                </li>
+
+                <li>
+                    <div id=""></div>
+                    <div id=""></div>
+                </li>
+
+                <li>
+                    <div id=""></div>
+                    <div id=""></div>
+                </li>
+
+                <li>
+                    <div id=""></div>
+                    <div id=""></div>
+                </li>
+
+                <li>
+                    <div id=""></div>
+                    <div id=""></div>
+                </li>
+
+                <li>
+                    <div id=""></div>
+                    <div id=""></div>
+                </li>
+
+                <li>
+                    <div id=""></div>
+                    <div id=""></div>
+                </li>
+
+                <li>
+                    <div id=""></div>
+                    <div id=""></div>
+                </li>
+            </ul>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">闪送</a></li>
+                <li><a href="#">购物车</a></li>
+                <li><a href="#">我的</a></li>
+            </ul>
+        </nav>
+        
+    </body>
+</html>
+
+

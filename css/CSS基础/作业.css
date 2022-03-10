@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#box{
+    border-width: 800px;
+    margin: 0 ;
+
+}
+#logo1{
+    height: 100px;
+    background-color: brown;
+}
+#nav{
+    height: 24px;
+    background-color: yellow;
+}
+#main{
+    height: 700px;
+}
+#leftmain{
+    width: 20%;
+    /* background-color: blueviolet; */
+    float: left;
+    height: 700px;
+}
+#rightmain{
+    width: 80%;
+    background-color: rgb(59, 170, 146);
+    float: right;
+    height: 700px;
+}
+#bottom{
+    background-color:powderblue;
+}
+#text{
+        font-size: medium;
+        font-family: "宋体";
+        color: dodgerblue;
+        text-align: center;
+}
+#navbox{
+    float:right;
+}
+#navbox>ul>li{
+    list-style-type: none;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    line-height: 24px;
+
+}
+#menu{
+    width: 300px;
+    margin: 20px;
+
+}
+#menu li{
+    font-size: 20px;
+}
+#menu>li{
+    line-height: 24px;
+    text-indent: 60px;
+
+}
+#menu ul{
+    display: none;
+}
+#menu ul li{
+    text-indent: 30px;
+
+}
+ #menu>li:hover ul{  /*此处表示的是当鼠标移动到li的时候，下面的ul就变成block，此时才会显示 */
+    display: block;
+}
+li{
+    list-style: none;
+}
+li a{
+    color: red;
+    text-decoration: none;
+}

@@ -1,0 +1,58 @@
+<!--
+ * @Author: Ana
+ * @Date: 2021-11-25 22:14:35
+ * @LastEditors: Ana
+ * @LastEditTime: 2021-11-25 22:33:59
+ * @Description: 今天也要加油呀
+ * @FilePath: /H5C3/animation transitions.html
+-->
+<!-- css3中的动画功能
+1.animations支持通过关键帧的指定在页面上产生复杂的动画效果
+2.transitions 支持从一个属性值平滑过度到另一个属性值
+
+transitions:property duration timing-function delay
+第一表示的是对哪个属性来进行操作 第二表示的是在多久事件实现平滑过度 第三表示的是通过什么方法实现 第四表示的是延迟多长时间实现
+可以分起来写中间加上-
+ -->
+
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <!-- <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/> -->
+        <title> </title>
+        <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 140px;
+            height: 140px;
+            font-size: 20px;
+            background-color: darkcyan;
+            text-align: center;
+            line-height: 100px;
+            /* margin-left: 50px;
+            margin-top: 50px; */
+            transition: height  2s  linear 0s ;
+            transition: all 2s linear 0s;
+        }
+        div:hover{  /*表示的是鼠标放上去在改变*/
+            height: 250px;
+            background-color:brown
+        }
+    </style>
+
+    <script type="text/javascript">
+        
+        
+    </script>
+    </head>
+    <body>
+        <div>今天也要加油呀</div>
+        
+    </body>
+</html>
+
+

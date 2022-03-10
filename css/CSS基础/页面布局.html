@@ -1,0 +1,93 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-11-10 20:39:07
+ * @LastEditTime: 2021-11-12 09:38:51
+ * @LastEditors: Ana
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: /css/页面布局.html
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>
+        </title>
+        <style type="text/css">
+            *{     /*这里的*号表示的就是通配的意思*/
+                padding: 0;
+                margin: 0;
+            }
+            #box{   /*这里表示的就是给boxdiv设置样式*/
+                width: 700px;
+                /* height: 100px; */
+                /* background-color: aquamarine; */
+                margin: 0 auto;
+            }
+            #logo1{
+                height: 100px;
+                background-color: aquamarine;
+            }
+            #nav{
+                height: 25px;
+                background-color: rgb(161, 127, 255);
+            }
+            #main{
+                height: 600px;
+
+            }
+            #leftmain{
+                display: inline-block;
+                width: 350px;
+                height: 600px;
+                background-color: rgb(255, 127, 176);
+            }
+            #rightmain{
+                display: inline-block;
+                width: 350px;
+                height: 600px;
+                float:right;  /*这里表示的是浮动过来*/
+                background-color: rgb(246, 255, 127);
+            }
+            #bottom{
+                height: 35px;
+                background-color: rgb(230, 164, 24);
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 將其放到最外层的box中 -->
+        <div id="box">
+<!-- logo1部分   注意ID要是唯一的 -->
+            <div id="logo1">  
+
+            </div>
+
+            <!-- nav导航 -->
+            <div id="nav">  
+
+            </div>
+
+            <!-- ad广告 -->
+            <div id="ad">  
+
+            </div>
+
+            <!-- 主题 -->
+            <div id="main">  
+                <div id="leftmain">  
+
+                </div>
+                <div id="rightmain">  
+
+                </div>
+            </div>
+
+            <!-- 底部 -->
+            <div id="bottom">  
+
+            </div>
+
+        </div>    
+    
+    </body>
+</html>

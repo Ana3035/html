@@ -1,0 +1,26 @@
+.box1{
+    width: 100px;
+    height: 100px;
+    background-color: cornflowerblue;
+    /* position: absolute; */
+}
+#box2{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+}
+#box3{
+    width: 100px;
+    height: 100px;
+    background-color: blanchedalmond;
+}
+.aap{
+    /* width: 100px;
+    height: 100px; */
+    background-color: blue;
+}
+#box4{
+    width: 100px;
+    height: 100px;
+    background-color:blueviolet;
+}

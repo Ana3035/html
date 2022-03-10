@@ -1,0 +1,60 @@
+<!--
+ * @Author: Ana
+ * @Date: 2021-11-17 06:56:20
+ * @LastEditors: Ana
+ * @LastEditTime: 2021-11-17 07:19:21
+ * @Description: 今天也要加油呀
+ * @FilePath: /DOm/鼠标事件.html
+-->
+<!DOCTYPE html>
+ <html>
+     <head>
+         <meta charset="utf-8" />
+         <title>  </title>
+         <!-- <script src="BOM简介.js" type="text/javascript"></script> -->
+         <link rel="stylesheet" type="text/css" href="style.css">
+
+         
+     </head>
+
+     <body style="height: 3000px;">
+        <ul>
+            <li>鼠标进入红色</li>
+            <li>鼠标离开变成蓝色/li>
+            <li>鼠标按下字体变成2倍</li>
+            <li>鼠标抬起字体小2倍</li>
+
+        </ul>
+        <script type="text/javascript">
+            var lis=document.getElementsByTagName("li")  //获取每一个li
+
+            for (var i=0;i<lis.length;i++){
+                lis[i].addEventListener("mouseover",function(){
+                    this.style.backgroundColor="red"
+                },false)
+
+                lis[i].addEventListener("mouseout",function(){
+                    this.style.backgroundColor="blue"
+
+                },false)
+
+                lis[i].addEventListener("mousedown",function(){
+                    this.style.fontSize=parseInt(getComputedStyle(this,null).fontSize)*2+"px"
+                },false)
+
+                lis[i].addEventListener("mouseup",function(){
+                    this.style.fontSize=parseInt(getComputedStyle(this,null).fontSize)/2+"px"
+
+                },false)
+            }
+            document.addEventListener("mousemove",function(){
+                console.log("鼠标在移动")
+            },false)   //这里表示的是整个屏幕都在动
+            //还有键盘事件,鼠标对象事件
+
+
+        </script>
+
+
+    </body>
+</html>

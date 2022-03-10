@@ -1,0 +1,59 @@
+<!--
+ * @Author: Ana
+ * @Date: 2021-11-16 10:53:05
+ * @LastEditors: Ana
+ * @LastEditTime: 2021-11-17 06:35:57
+ * @Description: 今天也要加油呀
+ * @FilePath: /DOm/DOM节点动态操作.html
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>  </title>
+        <!-- <script src="BOM简介.js" type="text/javascript"></script> -->
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+
+        
+        
+    </head >
+    <body style="height: 1000px;">
+        <div id="box">
+            <p>1</p>
+            <p>2</p>
+        </div>
+        <script type="text/javascript">
+            //表示的是将创建的标签放在屏幕的固定位置,首先获取屏幕
+            var div=document.getElementById("box")
+
+            //表示的是创建一个标签
+            var a=document.createElement("p")
+            a.innerHTML="赵安南"
+            a.style.backgroundColor="pink"
+            console.log(a)
+            //表示的是在后面添加上面的子节点
+            //div.appendChild(a)
+            //表示的是添加到节点的某一个子节点之前
+            //div.insertBefore(a,div.lastChild)   //但是最后还有一个文本节点
+            //替换文本节点
+            div.replaceChild(a,div.lastChild)  //同时也要注意最后还有一个文本节点
+
+            //克隆节点
+            var newDiv=div.cloneNode(true)
+            console.log(newDiv)
+
+            //删除节点
+            div.removeChild(div.lastChild)
+
+            //添加文本
+            var input=document.createElement("input")
+            input.setAttribute("type","text")
+            input.setAttribute("placeholder","good")  //表示的是设置初始值
+
+            document.getElementById("box").appendChild(input)
+
+
+
+        </script>
+    </body>
+</html>

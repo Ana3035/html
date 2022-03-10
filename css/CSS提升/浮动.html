@@ -1,0 +1,134 @@
+<!--
+ * @Author: Ana
+ * @Date: 2021-11-13 16:11:30
+ * @LastEditors: Ana
+ * @LastEditTime: 2021-11-14 14:53:44
+ * @Description: 今天也要加油呀
+ * @FilePath: /css/CSS提升/浮动.html
+-->
+<!-- 页面布局的方式
+    文档流：
+        文档流中元素框的位置由元素在HTML的位置来决定，块级元素是由上到下依次排列，框之间的垂直距离由框的得到，行内元素在行内水平布置 
+        文档流就是HTML中的元素，比如块级元素，行内元素，块级元素可能占据多行，行内元素只占一行
+    浮动流：
+        元素从正常的排列顺序被抽离，也就是将正常的顺序打乱，一层上面还有一层
+        浮动可以使得元素向左或者向右移动，直到边缘碰到边框或者另一个浮动边框为止
+
+            -->
+    <!-- 浮动
+    属性：float:left/right/none
+    属性定义的是在那个方向的移动，浮动元素本身会产生一个块级状，而不论其本身是何种元素
+    如果浮动非替换元素，此时需要制定一个特定的宽度，否则其会尽可能窄,也就是产生各种页面布局框
+
+    如果浮动元素上面的元素没有浮动属性，则浮动会另起一行在其下方浮动
+    浮动会产生背景颜色不能显示
+-->
+    <!-- 清除浮动
+    clear:left/right/both/none
+    clear属性规定了元素的那一侧不允许浮动其他元素 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>  </title>
+        <style type="text/css" />
+            #div1{
+                width: 100px;
+                height: 50px;
+                background-color:pink;
+            }
+
+            #div2{
+                width: 50px;
+                height: 50px;
+                background-color:yellow;
+                float:left; /*此时就浮动在div3上面，因为2不见了，下面的就上去了*/
+            }
+            #div3{
+                width: 150px;
+                height: 50px;
+                background-color:green;
+                float:right;
+            }
+            #div4{
+                width: 200px;
+                height: 50px;
+                background-color:orange;
+                float:right;
+            }
+            
+            #div5,#div6,#div7,#div8{
+                width: 50%;
+                height: 100px;
+            }
+            #div5{
+                background-color:orange;
+                float:left;
+            }
+            #div6{
+                background-color:pink;
+                float:left;
+            }
+            #div7{
+                background-color:blue;
+                float:left;
+            }
+            #div8{
+                background-color:brown;
+                float:left;
+            }
+
+        </style>
+        
+    </head>
+    <body>
+        <div id="div1">
+
+        </div>
+
+        <div id="div2">
+            
+        </div>
+
+        <div id="div3">
+            
+        </div>
+
+        <div id="div4">
+            
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div id="div5">
+            
+        </div>
+        
+        <div id="div6">
+            
+        </div>
+        <!-- 此处表示的就是2x2的布局因为下面的将上面的挤出来了 -->
+        <div style="width: 100px;height: 100px;">
+            
+        </div>
+        <div id="div7">
+            
+        </div>
+        <div id="div8">
+            
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- 使得图片周围都是文字 -->
+        <img src="/Users/zan/Desktop/html/img/4.jpeg" style="float: left;"/>
+        <p>aaaaaaaaaaaa</p>
+    </body>
+</html>
+

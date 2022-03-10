@@ -1,0 +1,106 @@
+<!--
+ * @Author: Ana
+ * @Date: 2021-11-26 18:50:12
+ * @LastEditors: Ana
+ * @LastEditTime: 2021-11-26 19:16:18
+ * @Description: 今天也要加油呀
+ * @FilePath: /H5C3/touch1.html
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+        <title> </title>
+        <style type="text/css">
+            html,body,nav,div,ul,li{
+                margin: 0;
+                padding: 0;
+            }
+            ul,li{
+                list-style: none;
+            }
+            nav{
+                width: 100%;
+                height: 44px;
+                overflow: hidden;
+            }
+            nav li{
+                height: 55px;
+                line-height: 44px;
+                overflow: scroll;
+                background-color: aquamarine;
+            }
+            nav ul{
+                display: inline-block;
+                white-space: nowrap;
+                font-size: 0;
+            }
+            nav ul li{
+                display: inline-block;
+                font-size: 16px;
+                height: 44px;
+                line-height: 44px;
+                padding: 0 30px;
+            }
+            .slider{
+                overflow: hidden;
+            }
+            .slider ul{
+                width: 600%;
+                display: flex;
+                white-space: nowrap;
+            }
+            .slider ul li{
+                flex: 1;
+                display: flex;
+                height: 400px;
+                align-items: center;
+                justify-content: center;
+                background-color: blueviolet;
+            }
+        </style>
+
+    
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li class="item1">娱乐</li>
+                <li class="item2">科技</li>
+                <li class="item3">数码</li>
+                <li class="item4">体育</li>
+                <li class="item5">游戏</li>
+                <li class="item6">美妆</li>
+
+            </ul>
+        </nav>
+        <div class="slider">
+            <ul class="con">
+                <li class="page1">第一</li>
+                <li class="page2">第二</li>
+                <li class="page3">第三</li>
+                <li class="page4">第四</li>
+                <li class="page5">第物</li>
+                <li class="page6">第六</li>
+
+            </ul>
+        </div>
+  
+        <script type="text/javascript">
+            var ul=document.querySelector("ul")
+            ul.addEventListener("touchstart",function(e){
+                this.startTouch=e.changedTouches[0];
+                this.isMove=false;
+            })
+            ul.addEventListener("touchmove",function(e){
+                var touch=e.changedTouches[0];
+                if(Math.abs(touch.pageX-this.startTouch.pageX)>10){
+                    
+                }
+            })
+            
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,65 @@
+<!--
+ * @Author: Ana
+ * @Date: 2021-11-17 07:19:33
+ * @LastEditors: Ana
+ * @LastEditTime: 2021-11-17 14:56:33
+ * @Description: 今天也要加油呀
+ * @FilePath: /DOm/事件流.html
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>  </title>
+        <!-- <script src="BOM简介.js" type="text/javascript"></script> -->
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            #box{
+                width: 100px;
+                height: 100px;
+                background-color: blueviolet;
+            }
+        </style>
+        
+    </head>
+    <body style="height: 3000px;">
+        <div id="box">
+
+        </div>
+
+        <input type="text" name="in" id="input" />
+        <br>
+        <a href="red.html" id="link">点我跳转</a>
+
+        <script type="text/javascript">
+            document.body.onclick=function(){
+                this.style.backgroundColor="yellow"
+            }
+            document.getElementById("box").onclick=function(e){
+                var ev=e||window.event
+                ev.stopPropagation()  //添加上述两句胡之后,就不会出现冒泡事件
+                this.style.backgroundColor="pink"   //此时点击box的时候,不仅box会出现换颜色,连背景颜色也会跟着换,此时就会出现bug,因为出现了事件冒泡到下一级
+
+            }
+            document.getElementById("input").onclick=function(e){
+                var ev=e||window.event
+                ev.stopPropagation()   //此时表示的也是阻止冒泡事件的发生
+            }
+
+            document.getElementById("link").onclick=function(e){
+                var ev=e||window.event
+                ev.stopPropagation()  
+
+                var info=window.confirm("您将访问的网址存在风险,是否继续?")  //但是此时会出现一个问题,就是即使点击取消,也会默认跳转页面,因为a标签就是默认跳转页面
+                if(info==false){
+                    ev.preventDefault()  //此处表示的就是阻止跳转的默认行为
+                }
+            }
+        </script>
+
+    </body>
+</html>

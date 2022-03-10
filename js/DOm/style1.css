@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#box{
+    width: 700px;;
+    height: 300px;
+    margin: 0,auto;   /*表示的是是图片居中 */
+    position: relative;
+}
+.bp{
+    width: 30px;
+    height: 50px;
+    background-color:rgba(0,0,0,0.2);
+    color: blue;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    top: 100px;
+    display: none;  /*表示的就是触发事件之后再显示*/
+}
+#left{
+    left: 0;
+    
+}
+#right{
+    right: 0;
+    
+}
+#list{
+  list-style: none; 
+  position: absolute;
+  bottom: 100px;
+  left: 200px;
+}
+#list li{
+    float: left;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background-color: cyan;
+    color: blueviolet;
+    margin: 10px;
+    border-radius: 50%;
+    
+}

@@ -1,0 +1,78 @@
+<!--
+ * @Author: Ana
+ * @Date: 2021-11-14 14:06:51
+ * @LastEditors: Ana
+ * @LastEditTime: 2021-11-14 14:54:49
+ * @Description: 今天也要加油呀
+ * @FilePath: /css/CSS提升/定位.html
+-->
+<!-- 定位
+    position：允许对元素进行定位，允许定位相当于正常情况的时候出现的位置，或者是相对于父元素、其他元素、甚至是浏览器本身 
+    属性：
+    absolute:设置绝对定位的元素相对于具有相对定位属性的父级元素便宜
+    fixed:生成固定位置的元素，相对于浏览器窗口进行定位
+    relative:相对定位的元素，相对于元素原来位置偏移
+    static:默认值，没有定位
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>  </title>
+        <style type="text/css" />
+            *{
+                margin:0;
+                padding:0;
+            }
+            #box{
+                width: 500px;
+                height: 500px;
+                background-color:pink;
+                position: relative;   /*注意父级元素一定要设置relative*/
+                left: 10px;   /*relative里面包含的是相对于原先的位置*/
+                top: 10px;
+
+            }
+            #div1{   /*相对于box来定位*/
+                width: 200px;
+                height: 200px;
+                background-color:yellow;
+                position: absolute;
+                left: 100px;
+                top: 50px;
+            }
+            #div2{   /*相对于div1来定位*/
+                width: 50px;
+                height: 50px;
+                background-color:red;
+                position: absolute;
+                left: 10px;
+                top: 50px;
+            }
+            #div3{
+                width: 50px;
+                height: 50px;
+                background-color:gray;
+                position: fixed;
+                left: 200px;
+                top: 200px;  /*此处表示的是相对于屏幕的位置是固定的，无论怎么滑动都不会改变*/
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div id="box">
+            <div id="div1">
+                <div id="div2">
+
+                </div>
+            </div>
+        </div>
+        <div style="width: 50px;height: 800px;background-color: aquamarine;">
+            
+        </div>
+        <div id="div3">
+
+        </div>
+    </body>
+</html>

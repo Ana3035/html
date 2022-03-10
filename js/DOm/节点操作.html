@@ -1,0 +1,50 @@
+<!--
+ * @Author: Ana
+ * @Date: 2021-11-16 10:33:53
+ * @LastEditors: Ana
+ * @LastEditTime: 2021-11-16 11:21:55
+ * @Description: 今天也要加油呀
+ * @FilePath: /DOm/节点操作.html
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>  </title>
+        <!-- <script src="BOM简介.js" type="text/javascript"></script> -->
+        
+        
+    </head>
+    <body style="height: 1000px;">
+        <div id="box1">
+            <p>我是第一</p>
+            <p>我是第二</p>
+            <p>我是第三</p>
+            <p>我是第四</p>
+
+        </div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+        <input id="put" type="text" name="in" placeholder="Ana">
+
+        <script type="text/javascript">
+            var jsDiv1=document.getElementById("box1")
+            var jsDiv2=document.getElementById("box2")
+            var jsDiv3=document.getElementById("box3")
+            var jsPut=document.getElementById("put")
+
+
+            var s=jsPut.placeholder
+
+            console.log(jsDiv1.nodeName,jsDiv2.nodeType,jsDiv3.nodeValue)
+
+            //拿出box1所有元素的子节点  还有firstchild
+            var allchi=jsDiv1.childNodes
+            console.log(allchi)  //显示出来9个节点是因为空白处也算作节点
+            console.log(jsPut.attributes)
+            
+        </script>
+
+
+    </body>
+</html>

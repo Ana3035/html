@@ -1,0 +1,58 @@
+<!--
+ * @Author: Ana
+ * @Date: 2021-11-16 11:27:35
+ * @LastEditors: Ana
+ * @LastEditTime: 2021-11-16 11:38:51
+ * @Description: 今天也要加油呀
+ * @FilePath: /DOm/球乱飞.html
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>  </title>
+        <!-- <script src="BOM简介.js" type="text/javascript"></script> -->
+        <style type="text/css">
+        #box{
+            width: 500px;
+            height: 400px;
+            background-color: aquamarine;
+            position: relative;
+            left: 30px;
+            top: 30px;
+        }
+        #ball{
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: blueviolet;
+            position: absolute;
+        }
+        </style>
+        
+    </head>
+    <body style="height: 1000px;position: relative;">
+        <div id="box">
+            <div id="ball">
+
+            </div>
+
+        </div>
+        <button onclick="fly()" style="position: absolute;left: 200px;top: 200px;">我飞了</button>
+        <script type="text/javascript">
+            var ball=document.getElementById("ball")
+            var speedx=5
+            var speedy=5
+            function fly(){
+                setInterval(function(){
+                    ball.style.left=ball.offsetLeft+speedx+"px"
+                    ball.style.top=ball.offsetTop+speedy+"px"
+                    if(ball.offsetTop>=400-50 || ball.offsetTop<=0)
+                    speedy *=-1
+                    if(ball.offsetLeft>=500-50 || ball.offsetLeft<=0)
+                    speedx *= -1
+                },50)
+            }
+        </script>
+    </body>
+</html>

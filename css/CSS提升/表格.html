@@ -1,0 +1,89 @@
+<!--
+ * @Author: Ana
+ * @Date: 2021-11-13 14:23:29
+ * @LastEditors: Ana
+ * @LastEditTime: 2021-11-13 15:02:30
+ * @Description: 今天也要加油呀
+ * @FilePath: /css/CSS提升/表单表格.html
+-->
+<!-- 表格 -->
+    <!-- 表格标签
+    <table>  表示的是定义表格，一定会包含表格的其他标签
+    <tr> 定义表格的行
+    <th> 定义表格的表头，需要在tr里面
+    <td> 定义表格的单元，需要在tr里面
+    <tbody> 定义表格主体，同下
+    <thead>定义表格的页眉，是表格分组标签，可以将表格分割
+    <tfoot> 定义表格页脚，同上   
+    此时表示的就是把表格分成三个部分
+    <caption> 定义表格标题
+        -->
+    <!-- 表格属性
+    colspan="value" 合并行
+    rowspan="value" 合并列
+    align="left.."
+    valign="top.."
+    cellpadding="value" 边框与内容之间的空白
+    cellspacing="value" 单元格之间的空白
+    -->
+    <!-- 表格的css属性需要写在style里面
+    caption-side:top/bottom  表示
+    border-spacing
+    border-collapse
+    empty-cells:show/hide   表示的是边框在不在
+    table-layout：auto/fixed -->
+    
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8" />
+            <title>  </title>
+            <style type="text/css" />
+            
+            </style>
+            
+        </head>
+        <body>
+            <table border="1" cellspacing="5" cellpadding="5" style="caption-side: top;border-spacing: 10px;empty-cells: hide;">
+                <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>gender</th>
+                        <th>height</th>
+                        <th>weight</th>
+                    </tr>
+                    
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>ana</td>
+                        <td>female</td>
+                        <td>158</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Nancy</td>
+                        <td>female</td>
+                        <td>162</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>wang</td>
+                        <td>male</td>
+                        <td>158</td>
+                        <td>100</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <p>表格</p>
+                </tfoot>
+
+                <caption>
+                    今天也要加油呀
+                </caption>
+                
+            </table>
+        </body>
+    </html>

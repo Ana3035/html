@@ -1,0 +1,100 @@
+<!--
+ * @Author: Ana
+ * @Date: 2021-11-16 11:44:44
+ * @LastEditors: Ana
+ * @LastEditTime: 2021-11-17 06:58:05
+ * @Description: 今天也要加油呀
+ * @FilePath: /DOm/事件.html
+-->
+<!-- 添加事件的方式  有点击事件,鼠标事件,聚焦事件,键盘事件
+ -->
+ <!DOCTYPE html>
+ <html>
+     <head>
+         <meta charset="utf-8" />
+         <title>  </title>
+         <!-- <script src="BOM简介.js" type="text/javascript"></script> -->
+         <link rel="stylesheet" type="text/css" href="style.css">
+
+         
+     </head>
+
+     <body style="height: 3000px;">
+        <!-- 此处表示的就是一种添加事件的方式 就是点击事件发生,事件是click 但是事件的处理函数就是onclick函数
+        以下就是各种添加事件的方式-->
+        <div id="box1" onclick="alert('ana')"></div>
+
+            <!-- 这里相当于继承 this代表的就是当前的标签,-->
+        <div id="box2" onclick="func(this)"></div>
+
+        <div id="box3"></div>
+
+        <div id="box4"></div>
+
+        <!-- //表示的就是鼠标点击则出现焦点表示的就是聚焦事件 -->
+        <input type="text" name="" id="in" value="">  
+        <!-- 鼠标单击双击 -->
+        <div id="mouse" style="width: 100px;height: 100px;background-color: blue;"></div>
+
+
+        <script type="text/javascript">
+        //关于什么使用this,this代表的是谁
+        //1.在标签中使用的时候,代表的是标签本身
+        //2.在函数体中直接使用的时候,代表的是window,在标签中将this作为实参传递给函数中的时候,在函数体中使用形参来代表标签本身
+        //3.在事件函数中使用的时候,代表的是标签本身
+            console.log(this)
+            function func(self){
+                console.log(self)  //此处表示的是接受标签
+                console.log(this)
+                self.style.backgroundColor="black"  //这里表示的就是修改标签
+                alert("awa")
+            }
+            //此处的的事件会被覆盖
+            var div3=document.getElementById("box3")
+            div3.onclick=function(){
+                    //console.log(self)
+                    console.log(this)  //此处表示的就是当前的标签,表示的就是在事件函数中直接使用this
+                    this.style.backgroundColor="red"//此处表示的就是使用当前标签来修改颜色
+                    alert("go")
+                }
+           // div3.onclick=null  //表示的是清除事件
+            
+            //这种方式添加的事件,事件相互之间不会影响    
+            var div4=document.getElementById("box4")
+            div4.addEventListener("click",function(){
+                alert("some")
+            },false)
+            div4.addEventListener("click",function(){
+                alert("some?")
+            },false)
+
+            //聚焦事件
+            var inp=document.getElementById("in")
+            inp.addEventListener("focus",function(){
+                console.log("聚焦事件")
+
+            },false)  //聚焦事件
+            inp.addEventListener("blur",function(){
+                console.log("离焦事件")
+            },false)  //离焦事件,一般作用于文本框
+
+            //鼠标单击双击
+            var time
+            var mouse=document.getElementById("mouse")
+            mouse.addEventListener("click",function(){
+                clearTimeout(time)  //此处表示的是清除次数
+                time=setTimeout(function(){  //表示的是延迟3秒之后再单击
+                    console.log("单击")
+                },300)
+               
+            },false)
+            mouse.addEventListener("dbclick",function(){
+                clearTimeout(time)
+                console.log("双击")
+            },false)
+            
+        </script>
+
+ 
+     </body>
+ </html>

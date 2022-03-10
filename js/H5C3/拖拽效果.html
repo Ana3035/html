@@ -1,0 +1,74 @@
+<!--
+ * @Author: Ana
+ * @Date: 2021-11-23 21:26:22
+ * @LastEditors: Ana
+ * @LastEditTime: 2021-11-23 21:49:53
+ * @Description: 今天也要加油呀
+ * @FilePath: /H5C3/拖拽效果.html
+-->
+<!-- 拖放事件
+    dragstart  表示的额是网页元素开始拖动的时候触发
+    drag 表示被拖动的元素在拖动的过程中持续触发
+    dragleave 表示离开的时候触发
+    dragover 表示停留在此元素的时候触发
+    drop 表示的是被拖动的元素或者从文件系统选中的文件,拖放落下的时候触发
+    dragend 表示拖拽结束的时候触发 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        <script src="jquery-3.5.1.min.js" type="text/javascript">
+            
+        </script>
+        <style type="text/css">
+            
+        </style>
+
+        <script type="text/javascript">
+            window.onload=function(){
+                var img1=document.getElementById("img1")
+                var img2=document.getElementById("img2")
+                var img=document.getElementById("img")
+                //想要拖动的是图片
+                //首先获取拖动的内容
+                img.ondragstart=function(e){
+                    var data=e.dataTransfer
+                    data.setData("text/plain",this.id)
+                }
+                //设置允许放置的区域
+                img2.ondragover=function(e){
+                    e.preventDefault()  //表示的是取消默认行为
+                }
+
+                //放置,得到图片事件
+                img2.ondrop=function(e){
+                    var data=e.dataTransfer
+                    var text=data.getData("text/plain")
+                    e.target.appendChild(document.getElementById(text))
+                }
+
+                //将图片放回事件
+                img1.ondragover=function(e){
+                    e.preventDefault()  //表示的是取消默认行为
+                }
+
+                //放置,得到图片事件
+                img1.ondrop=function(e){
+                    var data=e.dataTransfer
+                    var text=data.getData("text/plain")
+                    e.target.appendChild(document.getElementById(text))
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+        <div id="img1" style="border: 1px solid black;width: 100px;height: 100px;">
+            <img src="../../img/1.jpg" id="img" draggable="true"/>
+        </div>
+        <div id="img2" style="border: 1px solid black;width: 100px;height: 100px;">
+
+        </div>
+    </body>
+</html>
+

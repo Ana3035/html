@@ -1,0 +1,130 @@
+<!--
+ * @Author: Ana
+ * @Date: 2021-11-09 08:17:38
+ * @LastEditTime: 2021-11-10 13:57:00
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: /html/1.html
+-->
+
+<!DOCTYPE html>   
+
+<!-- 其中html表示的就是html文档的开始和结束 body表示的就是主体 doctype表示的是文档类型，基本上就用上述的类型
+title表示的就是标题，文件的名称需要用英文-->
+
+<html>  
+    <head>  
+        <meta charset="utf-8"/>
+        <title>Ana's Web</title>  
+        
+
+    </head>
+    <body>
+        welcome to Ana's web
+        <!-- 注释 -->
+        <!-- 标题标签 表示的就是文章标题大小-->
+
+        <!-- 锚点所链接到的位置 -->
+        <a href="#锚1">跳转锚点</a>
+
+        <h1>Ana nancy</h1>
+        <h2>Ana kang</h2>
+        <!-- 换行标签 -->
+        Ana nancy<br />Ana kang
+        <!-- 段落标签 显示出的段落之间会有空行-->
+        <p>在 Vscode 扩展商店中搜索koroFileHeader，点击安装</p>
+        <p>注释模板的设置</p>
+        <!-- 水平线标签 表示的就是在上述文字下面添加上一个水平线-->
+
+        <!-- 此处表示的就是设置一个锚点 -->
+        <a name="锚1"></a>
+
+        <hr />
+        Ana is good
+        <br />
+        <!-- 字体样式标签 -->
+        <!-- 加粗 -->
+        <strong>Ana is nice</strong>
+        <!-- 倾斜 -->
+        <br />
+        <em>Ana is nice</em>
+
+        <!-- 特殊符号 -->
+        <!-- 字和字之间添加空格 -->
+        <p>Ana &nbsp;&nbsp; is nice</p>
+        <br/>
+        <!-- 大于号 和小于号引号和版权符号-->
+        &gt;&lt;&quot;&copy;
+       <!-- 图像标签 JPG GIF PNG-->
+       <!-- <img src="path" alt="text" #这个表示的就是图片加载失败的时候显示的就是这个text，title="text" #title表示的就是将鼠标放置在图片上的时候，显示的就是text文字 ，width="x" height="y"/> -->
+       <br/>
+       <img src="/Users/zan/Desktop/html/img/4.jpeg" title="江大"/>
+
+        <!-- 链接标签 -->
+        <!-- a href="path" target="目标窗口位置" #常用的值有_self _blank 分别表示的是在本页面或者新开的页面>链接文本图像</a>-->
+        <br/>
+        <a href="https://www.baidu.com">百度一下</a>
+        <a href="img/4.jpeg" target="_blank">江大</a>
+        <!-- 下面表示的是点击这张图片就直接跳转 -->
+        <a href="https://www.baidu.com"><img src="img/4.jpeg"/></a>
+        <!-- 锚链接   当页面比较长的时候会分出不同的模块，单击这个模块的时候，会跳到对应的页面上 
+        方法：
+                在目标标签设置<a name=“值”>目标处</a>    在链接处设置href="路径#值"-->
+        
+        <!-- 列表标签 有序列表有编号  无序列表没有编号  以及还有自定义的列表-->
+        <!-- 无序列表 中间可以加上a标签表示的就是添加一个链接。之后可以在a标签之间加上文字，此时看起来就像一个无序列表 -->
+        <ul type="square">
+            <li>Ana is nice</li>
+            <li>Ana is good</li>
+            <li>Ana is greate</li>
+            <li><a href="https://www.baidu.com">百度</a></li>
+        </ul>
+        <!-- 无序列表的类型 type= disc显示出来的是实心圆默认值  square显示出来的是实心方形 circle显示出来的是空心圆-->
+
+        <!-- 有序列表 -->
+        <ol type="A">
+            <li>Ana is nice</li>
+            <li>Ana is good</li>
+            <li>Ana is greate</li>
+        </ol>
+        <!-- 有序列表类型 type=1 A/a I/i -->
+
+        <!-- 定义列表 -->
+        <dl>
+            <dt>学生</dt>
+            <dd>序号1</dd>
+            <dd>序号2</dd>
+        </dl>
+
+        <!-- 表格   基本结构：单元格 行 列  tr行 td列 -->
+        <!-- 对齐方式：
+                水平对齐方式：align:left center right 
+                垂直对齐方式：valign:top middle bottom baseline-->
+        <!-- 表格的跨行和跨列 跨列的时候注意最后一列会被挤出去，相当于合并了两个列 -->
+        <table border="1" cellspacing="1" cellpadding="5" align="left">
+            <tr>
+                <!-- 此处表示的是设置表头 -->
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+            </tr>
+            <tr>
+                <td colspan="2">第一行第一列</td>
+                <td rowspan="2">第一行第二列</td>
+                <!-- <td>第一行第三列</td> -->
+            </tr>
+            <tr>
+                <td>第二行第一列</td>
+                <td>第二行第二列</td>
+                <!-- <td>第二行第三列</td> -->
+            </tr>
+            <tr>
+                <td>第三行第一列</td>
+                <td>第三行第二列</td>
+                <td>第三行第三列</td>
+            </tr>
+        </table>
+        
+
+    </body>
+</html>

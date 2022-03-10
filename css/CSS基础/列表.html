@@ -1,0 +1,86 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-11-11 11:29:15
+ * @LastEditTime: 2021-11-12 10:28:43
+ * @LastEditors: Ana
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: /css/列表.html
+-->
+
+<!-- 
+    1、列表CSS声明：
+        list-style              表示的是简写属性，能够把所有用于列表的属性设置于一个声明中
+        list-style-image        将图像设置为列表项标志
+        list-style-position     设置列表中列表项标志的位置
+        list-style-type         设置列表项标志的类型
+    2、背景CSS声明：
+        background              表示的也是简写属性，同上
+        background-attachment   表示的是背景图像是否是固定的还是随着页面的剩余部分滚动
+        background-color        设置图片的背景颜色            
+        background-image        将图片设置为背景
+        background-position     设置图片的起始位置
+        background-repeat       设置背景图像是否重复以及如何重复
+        display：none           表示的是隐藏元素，这种方式隐藏元素在页面中是不占位置的
+        visibility：hidden      表示的也是隐藏元素，但是这种隐藏是占位的
+    
+ -->
+
+ <!DOCTYPE html>
+ <html>
+     <head>
+         <meta charset="utf-8" />
+         <title>列表</title>
+         <style type="text/css" />
+            li{
+                list-style: none url(/Users/zan/Desktop/html/img/2.jpeg) inside;  /*这里表示的是不显示前面的标识符,然后自定义图标，这一句话就相当于将上面的三级属性全部囊括*/
+
+                /*就相当于：
+                list-style-type:none;
+                list-style-image:url(/Users/zan/Desktop/html/img/2.jpeg);
+                list-style-position:inside;  */
+
+                
+            }
+            #box{
+                width: 150px;
+                height:150px;
+                background-color:red;
+                background-image:url(/Users/zan/Desktop/html/img/4.jpeg);/*此时图片可能会不够用*/
+                background-repeat:no-repeat;  /*此处表示的就是只出现一张图片，表示的是不平铺*/ 
+                /* background-repeat:repeat-x;  表示的是x 轴平铺*/
+                background-position:right;          
+            }
+            #box1{
+                width: 150px;
+                height:150px;
+                background-color:blue;
+                /* display：none; */
+                /* visibility: hidden; */
+                border-radius: 90px;   /*将下面的方形图片变成了一个圆形*/
+            }
+
+         </style>
+         
+     </head>
+     <body>
+        <ul>
+            <li>C </li>
+            <li>C++</li>
+            <li>java</li>
+            <li>python</li>
+            <li>PHP</li>
+            <li>Mysql</li>
+            <li>swift</li>
+
+        </ul>
+        <div id="box">
+            
+        </div>
+        <div id="box1">
+             
+        </div>
+        <span>
+            Ana
+        </span>
+     </body>
+ </html>

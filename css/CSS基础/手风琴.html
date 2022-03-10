@@ -1,0 +1,82 @@
+<!--
+ * @Author: Ana
+ * @Date: 2021-11-12 07:24:07
+ * @LastEditors: Ana
+ * @LastEditTime: 2021-11-12 07:52:11
+ * @Description: 今天也要加油呀
+ * @FilePath: /css/手风琴.html
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>  </title>
+        <style type="text/css" />
+            *{
+                padding: 0;
+                margin:0;
+            }
+            li{
+                list-style: none;
+
+            }
+            a{
+                text-decoration:none;
+                color: blue;
+                font-size:20px;
+            }
+            #menu>li,#menu>li>ul,#menu>li>a{
+                float:left;
+                
+            }
+            #menu>li>a{
+                display:block;
+                width:100px;
+                height:50px;
+                background-color:pink;
+            }
+            #menu>li:hover ul{
+                display:block;
+            }
+            #menu ul{
+                display：none;
+                width: 200px;
+                background-color:yellow;
+                padding-top:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="menu">
+            <li>
+                <a href="#">good</a>
+                <ul>
+                    <li>good1</li>
+                    <li>good2</li>
+                    <li>good3</li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">nice</a>
+                <ul>
+                    <li>nice1</li>
+                    <li>nice2</li>
+                    <li>nice3</li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">handsome</a>
+                <ul>
+                    <li>handsome1</li>
+                    <li>handsome2</li>
+                    <li>handsome3</li>
+
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>
+
+

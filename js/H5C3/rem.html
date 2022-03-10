@@ -1,0 +1,49 @@
+<!--
+ * @Author: Ana
+ * @Date: 2021-11-25 21:03:19
+ * @LastEditors: Ana
+ * @LastEditTime: 2021-11-26 18:47:49
+ * @Description: 今天也要加油呀
+ * @FilePath: /H5C3/rem.html
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+
+        <title> </title>
+        <style type="text/css">
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            #box{
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+            }
+
+        </style>
+
+        
+    </head>
+    <body>
+        <div id="box">
+
+        </div>
+        <script  type="text/javascript">
+            var box=document.getElementById("box")
+            box.addEventListener("touchstart",function(e){
+                console.log(e)
+            },false)
+
+            document.addEventListener("touchend",function(){
+                console.log("点击屏幕")
+            },false)
+            
+        </script>
+    </body>
+</html>
+
+

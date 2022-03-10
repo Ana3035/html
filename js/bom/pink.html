@@ -1,0 +1,33 @@
+<!--
+ * @Author: Ana
+ * @Date: 2021-11-15 10:31:10
+ * @LastEditors: Ana
+ * @LastEditTime: 2021-11-15 10:52:41
+ * @Description: 今天也要加油呀
+ * @FilePath: /html/js/pink.html
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title> pink</title>
+        
+    </head>
+    <body style="height: 1000px;background-color: pink;">
+        <button onclick="func()">跳转到yellow</button>   
+        <button onclick="func2()">跳转到下一页</button>   
+        <button onclick="func1()">跳转到上一页</button>   
+
+        <script  type="text/javascript">
+            function func(){
+                window.location.assign("yellow.html")
+            }
+            function func1(){
+                window.history.back()
+            }
+            function func2(){
+                window.history.forward()
+            }
+        </script>
+    </body>
+</html>

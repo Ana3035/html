@@ -1,0 +1,130 @@
+<!--
+ * @Author: Ana
+ * @Date: 2021-11-16 07:23:55
+ * @LastEditors: Ana
+ * @LastEditTime: 2021-11-16 09:08:33
+ * @Description: 今天也要加油呀
+ * @FilePath: /DOm/DOM.html
+-->
+<!-- DOM表示的是文档对象模型,是访问HTML和操作HTML的标准,
+    core DOM表示的是核心DOM 针对任何结构化文档的标准模型
+    XML DOM 针对XML文档的标准模型
+    HTML DOM 针对HTML文档的标准模型 -->
+
+<!-- DOM节点的分类
+    1.文档节点
+    2.标签节点
+    3.属性节点
+    4.文本节点
+    5.注释节点 -->
+
+<!-- DOM节点的层级关系
+    1.父节点:父节点拥有任意数目的子节点
+    2.子节点:子节点只能拥有一个父节点
+    3.兄弟节点:拥有相同父节点的同级节点
+    4.根节点:(HTML) 一个HTML文档一般只有一个根节点,根节点没有父节点,是最上面的节点-->
+
+<!-- js和页面中这些标签进行交互
+    1.获取标签(元素)节点
+        修改标签css样式  修改标签属性
+    2.创建标签
+    3.删除标签
+    4.复制标签
+    5.插入标签 -->
+
+    <!-- 获取标签节点 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>  </title>
+        <script  type="text/javascript"></script>
+        
+        
+    </head>
+    <body style="height: 1000px;">
+        <!-- type value 等表示的就是属性节点 整个input表示的就是元素节点 还有文本节点 charset表示的就是属性节点 -->
+        <div id="idDiv"></div>
+
+        <div class="classDiv"></div>
+        <div class="classDiv"></div>
+        <div class="classDiv"></div>
+        <div class="classDiv"></div>
+
+        <input type="text" name="inputText">
+        <input type="text" name="inputText">
+        <input type="text" name="inputText">
+
+        <button onclick="func()">按钮</button>
+        <button onclick="func1()">按钮1</button>
+
+        <input type="text" id="in" placeholder="赵安南" my="我的">
+
+        <div id="box">
+            我是一个盒子
+        </div>
+
+        <div id="color" style="width: 100px;height: 100px;background-color: aqua;position: relative;"></div>
+        <button onclick="changeColor()">换颜色</button>
+
+        <script  type="text/javascript">
+            //找到要操作的对象标签
+            var jsDiv=document.getElementById("idDiv")
+            console.log(jsDiv)            
+            console.log(typeof(jsDiv))
+
+            //找到相同种类的div,输出一个数组
+            var jsDivs=document.getElementsByClassName("classDiv")
+            console.log(jsDivs)
+            console.log(typeof(jsDivs))
+
+            //获取相同属性的div,带s的表示的都是多个,想要获取某一个则需要使用下标
+            var jsInp=document.getElementsByName("inputText")
+            console.log(jsInp)
+            console.log(typeof(jsInp))
+
+            //获取所有的div
+            var jsall=document.getElementsByTagName("div")
+            console.log(jsall)
+            console.log(typeof(jsall))
+
+            //找到属性节点
+            var jsInput=document.getElementById("in")
+            console.log(jsInput.placeholder)  
+            //console.log(jsInput.my)   自定义的属性获取不到
+            console.log(jsInput.getAttribute("my")) //表示是获取自定义属性
+            function func(){
+                jsInput.placeholder="sufe"   //修改属性值
+            } 
+            function func1(){
+                jsInput.setAttribute("my","nice") //remove表示是移除属性,而当设置的不存在的时候,就相当于增加一个属性
+                console.log(jsInput)  //修改自定义的属性 
+            }
+
+            //获取文本节点,获取的就是开始到结束的所有内容,包括换行
+            var jstext=document.getElementById("box")
+            console.log(jstext.innerHTML)
+            console.log(jstext.innerText)  //此处表示的就是获取的是纯文本
+
+            jstext.innerHTML="<h1>good</h1>"  //修改页面上面的文本
+
+            //修改css样式,表示的是修改style属性节点里面的内容,不是任何节点,更换颜色
+            var jscolor=document.getElementById("color")
+            function changeColor(){
+                jscolor.style.backgroundColor="yellow"
+                jscolor.style.width="70px"
+                jscolor.style.left="20px"  //换位置
+            }
+
+            //获取样式统一用下面的语法
+            w1=window.getComputedStyle(jsDivs,null).width
+            //设置样式
+
+
+
+
+
+        </script>
+        
+    </body>
+</html>  
